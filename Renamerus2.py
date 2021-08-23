@@ -7,8 +7,7 @@ for filename in os.listdir(folder):
     try: 
         ending = filename.split(delimiter,1)[1]
     except IndexError as e:
-        print("Failed to rename: ", end = filename)
-        print(" Because the delimiter condition does not exist.")
+        print("Failed to rename: " + filename + "\nBecause delimter condition does not exist.")
         continue
     numbers = ""
     finalname = ""
@@ -23,5 +22,5 @@ for filename in os.listdir(folder):
     finalname = '(' + numbers + ') ' + filename
     os.rename(folder + '/' + filename, folder + '/' + finalname)
 
-printf("Press any key to continue.")
+print("Press any key to continue.")
 input()
